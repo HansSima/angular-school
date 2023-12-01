@@ -9,6 +9,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SideNavigationComponent } from './pages/navigation/side-navigation/side-navigation.component';
 import { FooterComponent } from './pages/navigation/footer/footer.component';
 import { HeaderComponent } from './pages/navigation/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeaderComponent } from './pages/navigation/header/header.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     PrimeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
