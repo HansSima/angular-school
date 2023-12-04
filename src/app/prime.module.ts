@@ -4,6 +4,8 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToolbarModule } from 'primeng/toolbar';
 import { CardModule } from 'primeng/card';
 import { SplitterModule } from 'primeng/splitter';
+import { TableModule } from 'primeng/table';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   imports: [
@@ -12,6 +14,8 @@ import { SplitterModule } from 'primeng/splitter';
     SplitButtonModule,
     CardModule,
     SplitterModule,
+    TableModule,
+    DataViewModule,
   ],
   exports: [
     ButtonModule,
@@ -19,6 +23,8 @@ import { SplitterModule } from 'primeng/splitter';
     SplitButtonModule,
     CardModule,
     SplitterModule,
+    TableModule,
+    DataViewModule,
   ],
 })
 export class PrimeModule {}

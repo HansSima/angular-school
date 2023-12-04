@@ -9,163 +9,63 @@
         class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"></button>
     </div>
   </div>
-  <p-card header="Title">
-    <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
-      <ng-template pTemplate>
-        <div class="col flex align-items-center justify-content-center">Panel 1</div>
-      </ng-template>
-      <ng-template pTemplate>
-        <div class="col flex align-items-center justify-content-center">Panel 2</div>
-      </ng-template>
-    </p-splitter>
+  <p-card header="{{(bitcoinInfo$ | async)?.chartName}}">
 
-    <table>
-      <thead>
-        <tr>
-          <th>BPI</th>
-          <th>Chart name</th>
-          <th>Disclaimer</th>
-          <th>Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ (bitcoinInfo$ | async)?.bpi }}</td>
-          <td>{{ (bitcoinInfo$ | async)?.chartName }}</td>
-          <td>{{ (bitcoinInfo$ | async)?.disclaimer }}</td>
-          <td>{{ (bitcoinInfo$ | async)?.time }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="col flex flex-wrap align-items-center justify-content-center">
+      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
+        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
+        <p>
+          {{(bitcoinInfo$ | async)?.disclaimer}}
+        </p>
+        <ng-template pTemplate="footer">
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
+          </p>
+        </ng-template>
+      </p-card>
+
+      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
+        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
+        <p>
+          {{(bitcoinInfo$ | async)?.disclaimer}}
+        </p>
+        <ng-template pTemplate="footer">
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
+          </p>
+        </ng-template>
+      </p-card>
 
 
-
-
-    <p class="m-0">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-      deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-      neque
-      quas!
-    </p>
+      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
+        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
+        <p>
+          {{(bitcoinInfo$ | async)?.disclaimer}}
+        </p>
+        <ng-template pTemplate="footer">
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
+          </p>
+          <p>
+            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
+          </p>
+        </ng-template>
+      </p-card>
+    </div>
   </p-card>
 </div>

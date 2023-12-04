@@ -9,7 +9,7 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit {
-  bitcoinInfo$!: Observable<Bitcoin>;
+  bitcoinInfo$?: Observable<Bitcoin>;
 
   constructor(private mainService: MainService) {}
 
@@ -18,6 +18,7 @@ export class MainPageComponent implements OnInit {
   }
 
   getBitcoinInfo() {
+    this.mainService.getBitcoin().subscribe((p) => console.log(p));
     this.bitcoinInfo$ = this.mainService.getBitcoin();
   }
 }
