@@ -7,29 +7,31 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  items: MenuItem[] | undefined;
+  items: MenuItem[] = [];
 
   constructor() {}
 
   ngOnInit() {
     this.items = [
       {
-        label: 'Update',
-        icon: 'pi pi-refresh',
+        label: 'Web Development',
+        icon: '/assets/web_64.png',
+        url: 'web-basics',
       },
       {
-        label: 'Delete',
-        icon: 'pi pi-times',
+        label: 'HTML',
+        icon: '/assets/html_logo_480.png',
+        url: 'html-basics',
+      },
+      {
+        label: 'CSS',
+        icon: '/assets/css_logo_480.png',
+        url: 'css-basics',
       },
       {
         label: 'Angular',
-        icon: 'pi pi-external-link',
-        url: 'http://angular.io',
-      },
-      {
-        label: 'Router',
-        icon: 'pi pi-upload',
-        routerLink: '/fileupload',
+        icon: '/assets/angular_logo.png',
+        url: 'angular-basics',
       },
     ];
   }

@@ -21,4 +21,7 @@ export class MainPageComponent implements OnInit {
     this.mainService.getBitcoin().subscribe((p) => console.log(p));
     this.bitcoinInfo$ = this.mainService.getBitcoin();
   }
+
+  //interface customer with email and name fields
+
 }

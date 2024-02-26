@@ -6,6 +6,7 @@ import { CardModule } from 'primeng/card';
 import { SplitterModule } from 'primeng/splitter';
 import { TableModule } from 'primeng/table';
 import { DataViewModule } from 'primeng/dataview';
+import { DockModule } from 'primeng/dock';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { DataViewModule } from 'primeng/dataview';
     SplitterModule,
     TableModule,
     DataViewModule,
+    DockModule,
   ],
   exports: [
     ButtonModule,
@@ -25,6 +27,7 @@ import { DataViewModule } from 'primeng/dataview';
     SplitterModule,
     TableModule,
     DataViewModule,
+    DockModule,
   ],
 })
 export class PrimeModule {}
