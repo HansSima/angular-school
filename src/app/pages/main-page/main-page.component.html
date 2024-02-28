@@ -1,61 +1,36 @@
 <div class="my-3">
-  <p-card header="{{(bitcoinInfo$ | async)?.chartName}}">
-
+  <p-card header="Lekce">
     <div class="col flex flex-wrap align-items-center justify-content-center">
-      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
-        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
-        <p>
-          {{(bitcoinInfo$ | async)?.disclaimer}}
-        </p>
-        <ng-template pTemplate="footer">
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
-          </p>
-        </ng-template>
-      </p-card>
-
-      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
-        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
-        <p>
-          {{(bitcoinInfo$ | async)?.disclaimer}}
-        </p>
-        <ng-template pTemplate="footer">
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
-          </p>
-        </ng-template>
-      </p-card>
-
-
-      <p-card class="m-2" header="{{(bitcoinInfo$ | async)?.chartName}}"
-        subheader="{{(bitcoinInfo$ | async)?.time?.updated}}" [style]="{ width: '360px' }">
-        <p>
-          {{(bitcoinInfo$ | async)?.disclaimer}}
-        </p>
-        <ng-template pTemplate="footer">
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.EUR?.rate}} {{(bitcoinInfo$ | async)?.bpi?.EUR?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.USD?.rate}} {{(bitcoinInfo$ | async)?.bpi?.USD?.code}}
-          </p>
-          <p>
-            {{(bitcoinInfo$ | async)?.bpi?.GBP?.rate}} {{(bitcoinInfo$ | async)?.bpi?.GBP?.code}}
-          </p>
-        </ng-template>
-      </p-card>
+      <app-card-component></app-card-component>
+      <app-card-component></app-card-component>
+      <app-card-component></app-card-component>
+      <app-card-component></app-card-component>
     </div>
   </p-card>
+
+  <p-card header="Postup">
+    <div class="col flex flex-wrap align-items-center justify-content-center">
+      <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+          <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+            <i [ngClass]="event.icon"></i>
+          </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+          <p-card [header]="event.status" [subheader]="event.date">
+            <img *ngIf="event.image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+              [alt]="event.name" width="200" class="shadow-2" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
+              numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+              cupiditate
+              neque quas!
+            </p>
+            <button pButton label="Read more" class="p-button-text"></button>
+          </p-card>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </p-card>
+
 </div>

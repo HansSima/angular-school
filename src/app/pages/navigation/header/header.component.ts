@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslocoService } from '@ngneat/transloco';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,10 +10,18 @@ import { MenuItem } from 'primeng/api';
 export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
 
-  constructor() {}
+  constructor(private translocoService: TranslocoService) {
+    this.translocoService.setActiveLang('cs');
+    this.translocoService.setDefaultLang('cs');
+  }
 
   ngOnInit() {
     this.items = [
+      {
+        label: 'Home',
+        icon: '/assets/home_480.png',
+        url: '/',
+      },
       {
         label: 'Web Development',
         icon: '/assets/web_64.png',

@@ -10,6 +10,8 @@ import { SideNavigationComponent } from './pages/navigation/side-navigation/side
 import { FooterComponent } from './pages/navigation/footer/footer.component';
 import { HeaderComponent } from './pages/navigation/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponentComponent } from './shared/card-component/card-component.component';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     SideNavigationComponent,
     FooterComponent,
     HeaderComponent,
+    CardComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,8 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     PrimeModule,
     HttpClientModule,
+    TranslocoModule,
   ],
-  providers: [],
+  providers: [TranslocoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
