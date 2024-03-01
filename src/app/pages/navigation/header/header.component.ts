@@ -9,6 +9,9 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
+  itemsSm: MenuItem[] = [];
+
+  isMenuOpen: boolean = false;
 
   constructor(private translocoService: TranslocoService) {
     this.translocoService.setActiveLang('cs');
@@ -16,6 +19,17 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.itemsSm = [
+      {
+        label: 'New',
+        icon: 'pi pi-fw pi-plus',
+      },
+      {
+        label: 'Delete',
+        icon: 'pi pi-fw pi-trash',
+      },
+    ];
+
     this.items = [
       {
         label: 'Home',
@@ -43,5 +57,9 @@ export class HeaderComponent implements OnInit {
         url: 'angular-basics',
       },
     ];
+  }
+
+  onToggleSidenav() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

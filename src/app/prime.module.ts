@@ -8,6 +8,7 @@ import { TableModule } from 'primeng/table';
 import { DataViewModule } from 'primeng/dataview';
 import { DockModule } from 'primeng/dock';
 import { TimelineModule } from 'primeng/timeline';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { TimelineModule } from 'primeng/timeline';
     DataViewModule,
     DockModule,
     TimelineModule,
+    MenuModule,
   ],
   exports: [
     ButtonModule,
@@ -31,6 +33,7 @@ import { TimelineModule } from 'primeng/timeline';
     DataViewModule,
     DockModule,
     TimelineModule,
+    MenuModule,
   ],
 })
 export class PrimeModule {}

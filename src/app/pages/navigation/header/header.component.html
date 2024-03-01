@@ -1,6 +1,12 @@
 <div class="card">
   <div class="dock-window">
-    <p-dock [model]="items" [position]="'top'">
+    <p-button icon="pi pi-check" (click)="onToggleSidenav()" class="card md:hidden flex justify-content-center p-dock"
+      styleClass="p-button-rounded">
+    </p-button>
+
+    <p-menu *ngIf="isMenuOpen" [model]="itemsSm"></p-menu>
+
+    <p-dock class="hidden md:block" [model]="items" [position]="'top'">
       <ng-template pTemplate="item" let-item>
         <a [href]="item.url">
           <img [src]="item.icon" [alt]="item.label" width="100%" />
@@ -8,11 +14,13 @@
       </ng-template>
     </p-dock>
 
+
+
     <div href="/" class="surface-section px-4 py-8 md:px-6 lg:px-8 transparent-background">
-      <div class="text-700 text-center mt-8">
+      <div class="text-700 text-center mt-6">
         <div class="text-blue-600 font-bold mb-3"><i class="pi"></i>&nbsp;ŠKOLA ANGULARU</div>
         <div class="text-900 font-bold text-5xl mb-3">Objevuj s námi svět webových aplikací</div>
-        <div class="text-700 text-2xl mb-5">
+        <div class="text-700 text-2xl mb-5 hidden md:block">
           Uvažuješ o změně kariéry? Dostal jsi skvělý nápad na appku a chceš vědět jak ji vytvořit?
           Nebo jsi jen zvídavá povaha co se chce naučit něco nového?
           Pokud je odpověď ano, pak jsi tady správně
