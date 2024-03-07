@@ -11,7 +11,7 @@ import { FooterComponent } from './pages/navigation/footer/footer.component';
 import { HeaderComponent } from './pages/navigation/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponentComponent } from './shared/card-component/card-component.component';
-import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { LessonsComponent } from './components/lessons/lessons/lessons.component';
 
 @NgModule({
   declarations: [
@@ -21,16 +21,26 @@ import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
     FooterComponent,
     HeaderComponent,
     CardComponentComponent,
+    LessonsComponent,
   ],
+  exports: [
+    AppComponent,
+    MainPageComponent,
+    SideNavigationComponent,
+    FooterComponent,
+    HeaderComponent,
+    CardComponentComponent,
+    LessonsComponent,
+  ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     PrimeModule,
     HttpClientModule,
-    TranslocoModule,
   ],
-  providers: [TranslocoService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

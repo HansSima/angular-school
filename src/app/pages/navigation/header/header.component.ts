@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslocoService } from '@ngneat/transloco';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -13,10 +12,7 @@ export class HeaderComponent implements OnInit {
 
   isMenuOpen: boolean = false;
 
-  constructor(private translocoService: TranslocoService) {
-    this.translocoService.setActiveLang('cs');
-    this.translocoService.setDefaultLang('cs');
-  }
+  constructor() {}
 
   ngOnInit() {
     this.itemsSm = [
