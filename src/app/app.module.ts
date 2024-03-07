@@ -12,6 +12,7 @@ import { HeaderComponent } from './pages/navigation/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponentComponent } from './shared/card-component/card-component.component';
 import { LessonsComponent } from './components/lessons/lessons/lessons.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { LessonsComponent } from './components/lessons/lessons/lessons.component
     AppRoutingModule,
     PrimeModule,
     HttpClientModule,
+    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
