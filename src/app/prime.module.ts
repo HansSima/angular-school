@@ -9,6 +9,9 @@ import { DataViewModule } from 'primeng/dataview';
 import { DockModule } from 'primeng/dock';
 import { TimelineModule } from 'primeng/timeline';
 import { MenuModule } from 'primeng/menu';
+import { FieldsetModule } from 'primeng/fieldset';
+import { PanelModule } from 'primeng/panel';
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
   imports: [
@@ -22,6 +25,9 @@ import { MenuModule } from 'primeng/menu';
     DockModule,
     TimelineModule,
     MenuModule,
+    FieldsetModule,
+    PanelModule,
+    RatingModule,
   ],
   exports: [
     ButtonModule,
@@ -34,6 +40,9 @@ import { MenuModule } from 'primeng/menu';
     DockModule,
     TimelineModule,
     MenuModule,
+    FieldsetModule,
+    PanelModule,
+    RatingModule,
   ],
 })
 export class PrimeModule {}
