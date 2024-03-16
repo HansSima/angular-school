@@ -19,6 +19,7 @@ import { AngularPageComponent } from './pages/angular-page/angular-page.componen
 import { WebBasicsPageComponent } from './pages/web-basics-page/web-basics-page.component';
 import { HtmlBasicsPageComponent } from './pages/html-basics-page/html-basics-page.component';
 import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.component';
+import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.
     WebBasicsPageComponent,
     HtmlBasicsPageComponent,
     CssBasicsPageComponent,
+    LessonPageComponent,
   ],
   exports: [
     AppComponent,
@@ -46,6 +48,7 @@ import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.
     WebBasicsPageComponent,
     HtmlBasicsPageComponent,
     CssBasicsPageComponent,
+    LessonPageComponent,
   ],
 
   imports: [

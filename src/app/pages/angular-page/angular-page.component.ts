@@ -6,6 +6,12 @@ interface LessonCardItem {
   img?: string;
 }
 
+interface ContentItem {
+  title?: string;
+  content: string;
+  close: boolean;
+}
+
 @Component({
   selector: 'app-angular-page',
   templateUrl: './angular-page.component.html',
@@ -14,11 +20,31 @@ interface LessonCardItem {
 })
 export class AngularPageComponent {
   lessonCardItem!: LessonCardItem[];
+  motivations!: ContentItem[];
+
   value: number = 3;
 
   constructor() {}
 
   ngOnInit(): void {
+    this.motivations = [
+      {
+        title: 'O co v teto lekci jde?',
+        content: 'Odpoved na otazku1',
+        close: false,
+      },
+      { title: 'Proc to umet?', content: 'Odpoved na otazku2', close: true },
+      {
+        title: 'Co je nutne umet predtim?',
+        content: 'Odpoved na otazku2',
+        close: true,
+      },
+      {
+        title: 'Na co si dat pozor? (FAQ k teto lekci)',
+        content: 'Odpoved na otazku3',
+        close: true,
+      },
+    ];
     this.lessonCardItem = [
       {
         title: 'Co je Angular?',
