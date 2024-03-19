@@ -17,6 +17,7 @@ import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
 import { DividerModule } from 'primeng/divider';
 import { EditorModule } from 'primeng/editor';
+import { SpeedDialModule } from 'primeng/speeddial';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { EditorModule } from 'primeng/editor';
     MessagesModule,
     DividerModule,
     EditorModule,
+    SpeedDialModule,
   ],
   exports: [
     ButtonModule,
@@ -58,6 +60,7 @@ import { EditorModule } from 'primeng/editor';
     MessagesModule,
     DividerModule,
     EditorModule,
+    SpeedDialModule,
   ],
 })
 export class PrimeModule {}

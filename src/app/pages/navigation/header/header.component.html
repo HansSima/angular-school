@@ -1,19 +1,23 @@
 <div class="card">
   <div class="dock-window">
-    <p-button icon="pi pi-check" (click)="onToggleSidenav()" class="card md:hidden flex justify-content-center p-dock"
-      styleClass="p-button-rounded">
-    </p-button>
+    <div class="hidden md:block absolute top-0 left-0">
+      <img class="w-20rem z-1" src="../../../../assets/logo/wasp_black_text.png" alt="No logo">
+    </div>
 
-    <p-menu *ngIf="isMenuOpen" [model]="itemsSm"></p-menu>
+    <div class="md:hidden absolute top-0 left-0">
+      <img class="w-8rem z-1" src="../../../../assets/logo/wasp_black.png" alt="No logo">
+    </div>
 
-    <p-dock class="hidden md:block" [model]="items" [position]="'top'">
+    <p-speedDial class="md:hidden absolute top-0 right-0 mt-5 mr-8" [model]="itemsSm" direction="down"
+      showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-outlined"></p-speedDial>
+
+    <p-dock class="hidden md:block z-1" [model]="items" [position]="'top'">
       <ng-template pTemplate="item" let-item>
         <a [href]="item.url">
           <img [src]="item.icon" [alt]="item.label" width="100%" />
         </a>
       </ng-template>
     </p-dock>
-
 
     <div href="/" class="surface-section px-4 py-8 md:px-6 lg:px-8 transparent-background">
       <div class="text-700 text-center mt-6">

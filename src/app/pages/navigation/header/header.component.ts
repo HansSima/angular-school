@@ -17,12 +17,24 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.itemsSm = [
       {
-        label: 'New',
-        icon: 'pi pi-fw pi-plus',
+        icon: 'pi pi-pencil',
+        routerLink: ['/'],
       },
       {
-        label: 'Delete',
-        icon: 'pi pi-fw pi-trash',
+        icon: 'pi pi-refresh',
+        routerLink: ['/web-basics'],
+      },
+      {
+        icon: 'pi pi-trash',
+        routerLink: ['/html-basics'],
+      },
+      {
+        icon: 'pi pi-upload',
+        routerLink: ['/css-basics'],
+      },
+      {
+        icon: 'pi pi-external-link',
+        routerLink: ['/angular-basics'],
       },
     ];
 
@@ -53,9 +65,5 @@ export class HeaderComponent implements OnInit {
         url: 'angular-basics',
       },
     ];
-  }
-
-  onToggleSidenav() {
-    this.isMenuOpen = !this.isMenuOpen;
   }
 }
