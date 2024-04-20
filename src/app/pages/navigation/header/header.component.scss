@@ -1,17 +1,21 @@
-:host ::ng-deep {
-  .dock-window {
-    width: 100%;
-    height: 450px;
-    position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), url('../../../../assets/back3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
-  .transparent-background {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    height: 100%;
-  }
-
+.header {
+  background-color: #0d2136;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+  transform: scale(2);
+}
+
+.navigation-items{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

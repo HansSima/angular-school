@@ -18,6 +18,8 @@ import { MessagesModule } from 'primeng/messages';
 import { DividerModule } from 'primeng/divider';
 import { EditorModule } from 'primeng/editor';
 import { SpeedDialModule } from 'primeng/speeddial';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   imports: [
@@ -40,6 +42,8 @@ import { SpeedDialModule } from 'primeng/speeddial';
     DividerModule,
     EditorModule,
     SpeedDialModule,
+    AnimateOnScrollModule,
+    CheckboxModule,
   ],
   exports: [
     ButtonModule,
@@ -61,6 +65,8 @@ import { SpeedDialModule } from 'primeng/speeddial';
     DividerModule,
     EditorModule,
     SpeedDialModule,
+    AnimateOnScrollModule,
+    CheckboxModule,
   ],
 })
 export class PrimeModule {}

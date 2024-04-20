@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Bitcoin } from 'src/app/model/bitcoin.model';
-import { MainService } from 'src/app/services/main.service';
 
 interface EventItem {
   status?: string;

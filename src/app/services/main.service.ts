@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Bitcoin } from '../model/bitcoin.model';
+import { Bitcoin } from '../model/theory.model';
 
 @Injectable({
   providedIn: 'root',

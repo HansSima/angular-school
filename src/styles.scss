@@ -1,3 +1,18 @@
+/*#0d2136
+#3E8BCA
+#031525
+#2C3E50
+#d3e3fd
+#162c46
+
+#0c2136
+#162b46
+#031424
+#98b2d5
+#75a8ea
+*/
+
+
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
@@ -5,16 +20,24 @@
 @import '~quill/dist/quill.bubble.css';
 @import '~quill/dist/quill.snow.css';
 
+$primary-color: #0D2136;
+$secondary-color: #3E8BCA;
+$accent-color: #2C3E50;
+
 body {
   margin: 0;
   position: relative;
   padding-bottom: 60px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #f9fbfc;
+  background-color: $primary-color;
 }
 
 html {
   font-size: 16px;
+}
+
+h1{
+  color: white;
 }
 
 

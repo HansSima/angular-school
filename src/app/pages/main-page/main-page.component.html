@@ -1,5 +1,5 @@
 <div class="my-3">
-  <div class="col flex flex-wrap align-items-center justify-content-center">
+  <div class="col flex flex-wrap align-items-center justify-content-between">
     <app-card-component class="m-3"></app-card-component>
     <app-card-component class="m-3"></app-card-component>
     <app-card-component class="m-3"></app-card-component>
@@ -7,7 +7,7 @@
   </div>
 
 
-  <div class="col flex flex-wrap align-items-center justify-content-center">
+  <div class="hidden md:flex col flex-wrap align-items-center justify-content-center">
     <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
       <ng-template pTemplate="marker" let-event>
         <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">

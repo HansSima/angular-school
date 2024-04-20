@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -11,10 +12,18 @@ export class HeaderComponent implements OnInit {
   itemsSm: MenuItem[] = [];
 
   isMenuOpen: boolean = false;
+  showBanner: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
+    this.checkCurrentPage(this.router.url);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.checkCurrentPage(event.url);
+      }
+    });
+
     this.itemsSm = [
       {
         icon: 'pi pi-pencil',
@@ -41,29 +50,32 @@ export class HeaderComponent implements OnInit {
     this.items = [
       {
         label: 'Home',
-        icon: '/assets/home_480.png',
         url: '/',
       },
       {
-        label: 'Web Development',
-        icon: '/assets/web_64.png',
+        label: 'Web',
         url: 'web-basics',
       },
       {
         label: 'HTML',
-        icon: '/assets/html_logo_480.png',
         url: 'html-basics',
       },
       {
         label: 'CSS',
-        icon: '/assets/css_logo_480.png',
+        url: 'css-basics',
+      },
+      {
+        label: 'JS',
         url: 'css-basics',
       },
       {
         label: 'Angular',
-        icon: '/assets/angular_logo.png',
         url: 'angular-basics',
       },
     ];
+  }
+
+  private checkCurrentPage(url: string): void {
+    this.showBanner = url === '/';
   }
 }

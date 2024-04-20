@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
@@ -20,6 +21,10 @@ import { WebBasicsPageComponent } from './pages/web-basics-page/web-basics-page.
 import { HtmlBasicsPageComponent } from './pages/html-basics-page/html-basics-page.component';
 import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.component';
 import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
+import { LoginComponent } from './shared/login/login.component';
+import { BannerComponent } from './pages/navigation/banner/banner.component';
+
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,8 @@ import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
     HtmlBasicsPageComponent,
     CssBasicsPageComponent,
     LessonPageComponent,
+    LoginComponent,
+    BannerComponent,
   ],
   exports: [
     AppComponent,
@@ -49,6 +56,8 @@ import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
     HtmlBasicsPageComponent,
     CssBasicsPageComponent,
     LessonPageComponent,
+    LoginComponent,
+    BannerComponent,
   ],
 
   imports: [
@@ -59,6 +68,7 @@ import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
     HttpClientModule,
     TranslocoRootModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent],
