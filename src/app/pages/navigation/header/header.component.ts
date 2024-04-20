@@ -31,19 +31,19 @@ export class HeaderComponent implements OnInit {
       },
       {
         icon: 'pi pi-refresh',
-        routerLink: ['/web-basics'],
+        routerLink: ['/modul'],
       },
       {
         icon: 'pi pi-trash',
-        routerLink: ['/html-basics'],
+        routerLink: ['/modul'],
       },
       {
         icon: 'pi pi-upload',
-        routerLink: ['/css-basics'],
+        routerLink: ['/modul'],
       },
       {
         icon: 'pi pi-external-link',
-        routerLink: ['/angular-basics'],
+        routerLink: ['/modul'],
       },
     ];
 
@@ -54,23 +54,23 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Web',
-        url: 'web-basics',
+        url: 'modul',
       },
       {
         label: 'HTML',
-        url: 'html-basics',
+        url: 'modul',
       },
       {
         label: 'CSS',
-        url: 'css-basics',
+        url: 'modul',
       },
       {
         label: 'JS',
-        url: 'css-basics',
+        url: 'modul',
       },
       {
         label: 'Angular',
-        url: 'angular-basics',
+        url: 'modul',
       },
     ];
   }

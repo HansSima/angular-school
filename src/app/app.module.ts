@@ -16,13 +16,10 @@ import { CardComponentComponent } from './shared/card-component/card-component.c
 import { LessonsComponent } from './components/lessons/lessons/lessons.component';
 import { TranslocoRootModule } from './transloco-root.module';
 
-import { AngularPageComponent } from './pages/angular-page/angular-page.component';
-import { WebBasicsPageComponent } from './pages/web-basics-page/web-basics-page.component';
-import { HtmlBasicsPageComponent } from './pages/html-basics-page/html-basics-page.component';
-import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.component';
 import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
 import { LoginComponent } from './shared/login/login.component';
 import { BannerComponent } from './pages/navigation/banner/banner.component';
+import { LessonModulPageComponent } from './pages/lesson-modul-page/lesson-modul-page.component';
 
 import { environment } from 'src/environments/environment';
 
@@ -35,13 +32,10 @@ import { environment } from 'src/environments/environment';
     HeaderComponent,
     CardComponentComponent,
     LessonsComponent,
-    AngularPageComponent,
-    WebBasicsPageComponent,
-    HtmlBasicsPageComponent,
-    CssBasicsPageComponent,
     LessonPageComponent,
     LoginComponent,
     BannerComponent,
+    LessonModulPageComponent,
   ],
   exports: [
     AppComponent,
@@ -51,13 +45,10 @@ import { environment } from 'src/environments/environment';
     HeaderComponent,
     CardComponentComponent,
     LessonsComponent,
-    AngularPageComponent,
-    WebBasicsPageComponent,
-    HtmlBasicsPageComponent,
-    CssBasicsPageComponent,
     LessonPageComponent,
     LoginComponent,
     BannerComponent,
+    LessonModulPageComponent,
   ],
 
   imports: [

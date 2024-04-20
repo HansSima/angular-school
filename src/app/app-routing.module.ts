@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import { AngularPageComponent } from './pages/angular-page/angular-page.component';
-import { WebBasicsPageComponent } from './pages/web-basics-page/web-basics-page.component';
-import { HtmlBasicsPageComponent } from './pages/html-basics-page/html-basics-page.component';
-import { CssBasicsPageComponent } from './pages/css-basics-page/css-basics-page.component';
+import { LessonModulPageComponent } from './pages/lesson-modul-page/lesson-modul-page.component';
+import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
 
 const routes: Routes = [
-  { path: '', component: MainPageComponent },
-  { path: 'web-basics', component: WebBasicsPageComponent },
-  { path: 'html-basics', component: HtmlBasicsPageComponent },
-  { path: 'css-basics', component: CssBasicsPageComponent },
-  { path: 'angular-basics', component: AngularPageComponent },
+  { path: '', component: MainPageComponent, title: 'WASP - Main Page' },
+  {
+    path: 'modul',
+    component: LessonModulPageComponent,
+    title: 'WASP - Modul Page',
+  },
+  {
+    path: 'lesson-page',
+    component: LessonPageComponent,
+    title: 'WASP - Lesson Page',
+  },
+  //TODO dodelat 404 komponentu
+  //{ path: '**', title: 'Lesson Page', component: MainPageComponent },
 ];
 
 @NgModule({

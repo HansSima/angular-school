@@ -1,40 +1,20 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FieldsetModule } from 'primeng/fieldset';
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  category: string;
-  rating: number;
-}
-
-interface LessonCardItem {
-  title?: string;
-  img?: string;
-}
-
-interface ContentItem {
-  title?: string;
-  content: string;
-  close: boolean;
-}
+import { Component } from '@angular/core';
+import { ContentItem, LessonCardItem, Product } from '../../model/theory.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-angular-page',
-  templateUrl: './angular-page.component.html',
-  styleUrls: ['./angular-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-lesson-modul-page',
+  templateUrl: './lesson-modul-page.component.html',
+  styleUrl: './lesson-modul-page.component.scss',
 })
-export class AngularPageComponent {
+export class LessonModulPageComponent {
   lessonCardItem!: LessonCardItem[];
   products!: Product[];
   motivations!: ContentItem[];
 
   value: number = 3;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.motivations = [
@@ -55,6 +35,7 @@ export class AngularPageComponent {
         close: true,
       },
     ];
+
     this.lessonCardItem = [
       {
         title: 'Co je Angular?',
@@ -259,5 +240,9 @@ export class AngularPageComponent {
         rating: 5,
       },
     ];
+  }
+
+  navigateToLesson() {
+    this.router.navigate(['lesson-page']);
   }
 }
