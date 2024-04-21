@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Bitcoin } from '../model/theory.model';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +10,7 @@ export class MainService {
 
   constructor(private http: HttpClient) {}
 
-  getBitcoin(): Observable<Bitcoin> {
-    return this.http.get<Bitcoin>(this.apiUrl + '/currentprice.json');
+  getAny(): Observable<any> {
+    return this.http.get<any>(this.apiUrl + '/currentprice.json');
   }
 }

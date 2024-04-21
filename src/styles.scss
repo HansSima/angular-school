@@ -19,6 +19,7 @@
 @import '~quill/dist/quill.core.css';
 @import '~quill/dist/quill.bubble.css';
 @import '~quill/dist/quill.snow.css';
+@import '~primeng/resources/primeng.min.css';
 
 $primary-color: #0D2136;
 $secondary-color: #3E8BCA;
@@ -38,6 +39,12 @@ html {
 
 h1{
   color: white;
+}
+
+.ui-button {
+  background-color: #0D2136 !important;
+  color: #ffffff !important; /* Bílá barva textu */
+  border-color: #0D2136 !important; /* Barva ohraničení */
 }
 
 

@@ -19,7 +19,8 @@ import { TranslocoRootModule } from './transloco-root.module';
 import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
 import { LoginComponent } from './shared/login/login.component';
 import { BannerComponent } from './pages/navigation/banner/banner.component';
-import { LessonModulPageComponent } from './pages/lesson-modul-page/lesson-modul-page.component';
+import { LessonModulPageComponent } from './pages/lesson-modul-container/lesson-modul-page/lesson-modul-page.component';
+import { LessonModulContainerComponent } from './pages/lesson-modul-container/lesson-modul-container.component';
 
 import { environment } from 'src/environments/environment';
 
@@ -36,6 +37,7 @@ import { environment } from 'src/environments/environment';
     LoginComponent,
     BannerComponent,
     LessonModulPageComponent,
+    LessonModulContainerComponent,
   ],
   exports: [
     AppComponent,
@@ -49,6 +51,7 @@ import { environment } from 'src/environments/environment';
     LoginComponent,
     BannerComponent,
     LessonModulPageComponent,
+    LessonModulContainerComponent,
   ],
 
   imports: [

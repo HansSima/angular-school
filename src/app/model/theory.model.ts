@@ -1,3 +1,13 @@
+import { Message } from 'primeng/api';
+
+export interface TheoryBlockItem {
+  title?: string;
+  content: string;
+  img?: string;
+  info?: Message[];
+  warning?: Message[];
+}
+
 export interface TheoryModel {
   title: string;
   content: string;
@@ -11,7 +21,12 @@ export interface Warning {
   detail: string;
 }
 
-export interface Product {
+export interface Lesson {
+  lessonModules: LessonModules[];
+  motivations: Motivations[];
+}
+
+export interface LessonModules {
   id: string;
   name: string;
   description: string;
@@ -20,12 +35,7 @@ export interface Product {
   rating: number;
 }
 
-export interface LessonCardItem {
-  title?: string;
-  img?: string;
-}
-
-export interface ContentItem {
+export interface Motivations {
   title?: string;
   content: string;
   close: boolean;

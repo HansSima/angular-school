@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import { LessonModulPageComponent } from './pages/lesson-modul-page/lesson-modul-page.component';
 import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
+import { LessonModulContainerComponent } from './pages/lesson-modul-container/lesson-modul-container.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent, title: 'WASP - Main Page' },
   {
     path: 'modul',
-    component: LessonModulPageComponent,
+    component: LessonModulContainerComponent,
     title: 'WASP - Modul Page',
   },
   {

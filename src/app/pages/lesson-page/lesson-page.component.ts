@@ -1,19 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Message } from 'primeng/api';
-
-interface ContentItem {
-  title?: string;
-  content: string;
-  close: boolean;
-}
-
-interface TheoryBlockItem {
-  title?: string;
-  content: string;
-  img?: string;
-  info?: Message[];
-  warning?: Message[];
-}
+import { Motivations, TheoryBlockItem } from 'src/app/model/theory.model';
 
 @Component({
   selector: 'app-lesson-page',
@@ -21,8 +7,8 @@ interface TheoryBlockItem {
   styleUrl: './lesson-page.component.scss',
 })
 export class LessonPageComponent implements OnInit {
-  motivations!: ContentItem[];
-  questions!: ContentItem[];
+  motivations!: Motivations[];
+  questions!: Motivations[];
   theory!: TheoryBlockItem[];
   comment: string = 'Napis komentar';
 
@@ -58,6 +44,7 @@ export class LessonPageComponent implements OnInit {
         close: true,
       },
     ];
+
     this.theory = [
       {
         title: 'Content1',
