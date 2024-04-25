@@ -22,7 +22,7 @@
 @import '~primeng/resources/primeng.min.css';
 
 $primary-color: #0D2136;
-$secondary-color: #3E8BCA;
+$secondary-color: #162b46;
 $accent-color: #2C3E50;
 
 body {
@@ -41,10 +41,14 @@ h1{
   color: white;
 }
 
-.ui-button {
-  background-color: #0D2136 !important;
-  color: #ffffff !important; /* Bílá barva textu */
-  border-color: #0D2136 !important; /* Barva ohraničení */
+/*.p-card {
+  background-color: $secondary-color !important;
+  color: white;
 }
+
+button {
+  background-color: $primary-color !important;
+  color: white;
+}*/
 
 

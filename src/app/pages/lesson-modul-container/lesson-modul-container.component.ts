@@ -15,7 +15,11 @@ export class LessonModulContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.firebaseServise.getLessons('html').subscribe((data) => {
-      console.log(data[0]);
+      console.log(data);
+    });
+
+    this.firebaseServise.getAll('html').subscribe((data) => {
+      console.log(data);
     });
 
     this.lesson = {

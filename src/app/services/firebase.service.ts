@@ -10,4 +10,12 @@ export class FirebaseService {
   getLessons(collectionId: string) {
     return this.afd.collection<[]>(collectionId).valueChanges();
   }
+
+  setLessons() {
+    //return this.afd.collection<[]>('html').add()
+  }
+
+  getAll(collectionId: string) {
+    return this.afd.collection<[]>(collectionId).snapshotChanges();
+  }
 }
