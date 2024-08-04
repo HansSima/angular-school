@@ -1,29 +1,35 @@
 <p-panel [header]="'Add new module'" [toggleable]="true" [collapsed]="true">
-  <div class="col flex flex-wrap align-items-center justify-content-evenly flex-column gap-4">
-    <form [formGroup]="formAddNewLesson" class="col flex flex-wrap gap-6">
-      <p-dropdown [style]="{ width: '250px' }" [options]="collectionNames" placeholder="Select a Collection"
-        (onChange)="changeActiveCollection($event)">
-      </p-dropdown>
-      <p-floatLabel>
-        <input type="text" pInputText formControlName="category" />
-        <label for="username">Category</label>
-      </p-floatLabel>
-      <p-floatLabel>
-        <input type="text" pInputText formControlName="id" />
-        <label for="username">ID</label>
-      </p-floatLabel>
-      <p-floatLabel>
-        <input type="text" pInputText formControlName="name" />
-        <label for="username">Name</label>
-      </p-floatLabel>
 
-      <p-editor formControlName="description" [style]="{ height: '215px', width: '700px' }"></p-editor>
-      <div class="row flex flex-wrap align-items-center justify-content-evenly flex-row gap-4">
+  <form [formGroup]="formAddNewLesson" class="col flex flex-wrap flex-column gap-6">
+    <p-dropdown [style]="{ width: '250px' }" [options]="collectionNames" placeholder="Select a Collection"
+      (onChange)="changeActiveCollection($event)">
+    </p-dropdown>
 
+
+    <p-panel [header]="'New module'" [toggleable]="false" [collapsed]="false">
+      <div class="flex flex-wrap flex-row gap-6">
+        <p-floatLabel>
+          <input type="text" pInputText formControlName="category" />
+          <label for="username">Category</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input type="text" pInputText formControlName="id" />
+          <label for="username">ID</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input type="text" pInputText formControlName="name" />
+          <label for="username">Name</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <textarea formControlName="description" rows="2" cols="30" pInputTextarea [autoResize]="true"></textarea>
+          <label for="float-input">Description</label>
+        </p-floatLabel>
         <p-fileUpload [disabled]="formAddNewLesson.invalid" mode="basic" chooseLabel="Vyber obrázek lekce"
           chooseIcon="pi pi-upload" name="demo[]" accept="image/*" (uploadHandler)="onUpload($event)"
           (onSelect)="onAttachmentSelected($event)" [customUpload]=true />
       </div>
-    </form>
-  </div>
+    </p-panel>
+
+  </form>
+
 </p-panel>

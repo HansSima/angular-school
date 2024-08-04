@@ -26,6 +26,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { FileUploadModule } from 'primeng/fileupload';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   imports: [
@@ -56,6 +57,7 @@ import { DropdownModule } from 'primeng/dropdown';
     OverlayPanelModule,
     FileUploadModule,
     DropdownModule,
+    InputTextareaModule,
   ],
   exports: [
     ButtonModule,
@@ -85,6 +87,7 @@ import { DropdownModule } from 'primeng/dropdown';
     OverlayPanelModule,
     FileUploadModule,
     DropdownModule,
+    InputTextareaModule,
   ],
 })
 export class PrimeModule {}
