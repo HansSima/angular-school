@@ -13,18 +13,19 @@
   </div>
 
   <div class="hidden md:flex h-6rem w-1 justify-content-center align-items-center" style="font-size: 2rem">
-    <p-button icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true"></p-button>
+
+    <p-button (click)="op.toggle($event)" icon="pi pi-user" [rounded]="true" severity="info"
+      [outlined]="true"></p-button>
+
+    <p-overlayPanel #op>
+      <app-login></app-login>
+    </p-overlayPanel>
 
   </div>
 
 </div>
 
 <app-banner *ngIf="showBanner"></app-banner>
-
-
-
-
-
 
 <!--
 <p-toolbar>

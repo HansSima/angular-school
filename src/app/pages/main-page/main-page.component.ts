@@ -16,8 +16,6 @@ interface EventItem {
 export class MainPageComponent implements OnInit {
   events!: EventItem[];
 
-  constructor() {}
-
   ngOnInit(): void {
     this.events = [
       {

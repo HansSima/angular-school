@@ -3,7 +3,7 @@ import { PrimeModule } from './prime.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { AppComponent } from './app.component';
@@ -21,8 +21,14 @@ import { LoginComponent } from './shared/login/login.component';
 import { BannerComponent } from './pages/navigation/banner/banner.component';
 import { LessonModulPageComponent } from './pages/lesson-modul-container/lesson-modul-page/lesson-modul-page.component';
 import { LessonModulContainerComponent } from './pages/lesson-modul-container/lesson-modul-container.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
+import { FirebaseTestConsoleComponent } from './components/firebase-test-console/firebase-test-console.component';
+import { AddNewLessonComponent } from './components/add-new-lesson/add-new-lesson.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +44,10 @@ import { environment } from 'src/environments/environment';
     BannerComponent,
     LessonModulPageComponent,
     LessonModulContainerComponent,
+    SignInComponent,
+    AdminPageComponent,
+    FirebaseTestConsoleComponent,
+    AddNewLessonComponent,
   ],
   exports: [
     AppComponent,
@@ -52,6 +62,10 @@ import { environment } from 'src/environments/environment';
     BannerComponent,
     LessonModulPageComponent,
     LessonModulContainerComponent,
+    SignInComponent,
+    AdminPageComponent,
+    FirebaseTestConsoleComponent,
+    AddNewLessonComponent,
   ],
 
   imports: [
@@ -62,7 +76,9 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     TranslocoRootModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

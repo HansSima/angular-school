@@ -72,6 +72,10 @@ export class HeaderComponent implements OnInit {
         label: 'Angular',
         url: 'modul',
       },
+      {
+        label: 'Admin Page',
+        url: 'admin-console',
+      },
     ];
   }
 

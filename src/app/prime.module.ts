@@ -20,6 +20,12 @@ import { EditorModule } from 'primeng/editor';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { ScrollTopModule } from 'primeng/scrolltop';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { FileUploadModule } from 'primeng/fileupload';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -44,6 +50,12 @@ import { CheckboxModule } from 'primeng/checkbox';
     SpeedDialModule,
     AnimateOnScrollModule,
     CheckboxModule,
+    InputTextModule,
+    FloatLabelModule,
+    ScrollTopModule,
+    OverlayPanelModule,
+    FileUploadModule,
+    DropdownModule,
   ],
   exports: [
     ButtonModule,
@@ -67,6 +79,12 @@ import { CheckboxModule } from 'primeng/checkbox';
     SpeedDialModule,
     AnimateOnScrollModule,
     CheckboxModule,
+    InputTextModule,
+    FloatLabelModule,
+    ScrollTopModule,
+    OverlayPanelModule,
+    FileUploadModule,
+    DropdownModule,
   ],
 })
 export class PrimeModule {}

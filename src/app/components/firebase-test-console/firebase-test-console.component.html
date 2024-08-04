@@ -1,0 +1,46 @@
+<p-panel [header]="'Firestore CRUD - test'" [toggleable]="true" [collapsed]="true">
+  <div class="mt-2">
+    <p-panel [header]="'Request'" [toggleable]="true" [collapsed]="true">
+      <form [formGroup]="formTestGroup" class="col flex flex-wrap align-items-center justify-content-evenly gap-6">
+        <div class="col flex flex-wrap align-items-center justify-content-evenly flex-column gap-4">
+          <p-button [style]="{ width: '150px' }" label="GET" (onClick)="getData()"></p-button>
+          <p-button [style]="{ width: '150px' }" label="SET" (onClick)="setData()" severity="warning"></p-button>
+          <p-button [style]="{ width: '150px' }" label="SET NEW COLLECTION" (onClick)="setNewCollection()"
+            severity="warning"></p-button>
+
+          <p-button [style]="{ width: '150px' }" label="UPDATE" (onClick)="updateData()" severity="help"></p-button>
+          <p-button [style]="{ width: '150px' }" label="DELETE" (onClick)="deleteData()" severity="danger"></p-button>
+        </div>
+
+        <div class="col flex flex-wrap align-items-center justify-content-evenly flex-column gap-4">
+          <p-floatLabel>
+            <input type="text" pInputText formControlName="collectionIdInput" />
+            <label for="username">Collection ID</label>
+          </p-floatLabel>
+          <p-floatLabel>
+            <input type="text" pInputText formControlName="documentIdInput" />
+            <label for="username">Document ID</label>
+          </p-floatLabel>
+
+          <p-floatLabel>
+            <input type="text" pInputText formControlName="fieldIdInput" />
+            <label for="username">Field ID</label>
+          </p-floatLabel>
+          <p-floatLabel>
+            <input type="text" pInputText />
+            <label for="username">Pokus3</label>
+          </p-floatLabel>
+        </div>
+        <p-editor formControlName="text" [style]="{ height: '215px', width: '700px' }"></p-editor>
+      </form>
+    </p-panel>
+  </div>
+
+  <div class="mt-2">
+    <p-panel [header]="'Response'" [toggleable]="true" [collapsed]="true">
+      <p-editor [(ngModel)]="responseText" [readonly]="true" [style]="{ height: '320px'}"></p-editor>
+    </p-panel>
+  </div>
+
+
+</p-panel>

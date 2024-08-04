@@ -13,6 +13,8 @@ export const environment = {
     appId: '1:1030050727280:web:5678ceee22b97621fe3bb5',
     measurementId: 'G-QCWN7NS8MV',
   },
+  storage:
+    'https://firebasestorage.clients6.google.com/v0/b/angular-school-c0515.appspot.com/o?name=',
 };
 
 /*
