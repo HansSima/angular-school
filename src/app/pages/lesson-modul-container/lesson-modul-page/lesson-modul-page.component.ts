@@ -15,6 +15,7 @@ export class LessonModulPageComponent {
   constructor(private router: Router) {}
 
   navigateToLesson() {
+    console.log('Hello world');
     this.router.navigate(['lesson-page']);
   }
 }
